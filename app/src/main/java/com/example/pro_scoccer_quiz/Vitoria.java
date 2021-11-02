@@ -14,11 +14,11 @@ public class Vitoria extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vitoria);
 
-        Button btnSair;
+        Button btnSair2;
 
-        btnSair = findViewById(R.id.btnSair);
+        btnSair2 = findViewById(R.id.btnSair2);
 
-        btnSair.setOnClickListener(new View.OnClickListener() {
+        btnSair2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Vitoria.this, MainActivity.class);

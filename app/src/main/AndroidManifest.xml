@@ -13,7 +13,7 @@
             android:name=".Vitoria"
             android:exported="true" />
         <activity
-            android:name=".login"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".Jogo"
@@ -22,7 +22,7 @@
             android:name=".Derrota"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

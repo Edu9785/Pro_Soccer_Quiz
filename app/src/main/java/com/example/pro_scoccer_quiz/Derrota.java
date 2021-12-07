@@ -30,6 +30,7 @@ public class Derrota extends AppCompatActivity {
                 Jogadores jogadores = new Jogadores(NomeJogador);
                 jogadores.setNomeJogador(NomeJogador);
                 txtResposta.setText("A resposta certa seria: " + jogadores.getNomeJogador());
+
             }
         });
 

@@ -18,13 +18,12 @@ public class Vitoria extends AppCompatActivity {
 
         btnSair2 = findViewById(R.id.btnSair2);
 
-        btnSair2.setOnClickListener(new View.OnClickListener() {
+        btnSair2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Vitoria.this, MainActivity.class);
                 startActivity(intent);
             }
         });
-
     }
 }

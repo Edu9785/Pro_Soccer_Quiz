@@ -19,9 +19,9 @@ public class DbHelper extends SQLiteOpenHelper {
             + " Clube integer not null)";
 
 
-    public static final String tablerespostas = "create table respostas"
-            + "(id_resposta integer primary key autoincrement,"
-            + " resposta text not null)";
+    public static final String tableperguntas = "create table perguntas"
+            + "(id_perguntas integer primary key autoincrement,"
+            + " perguntas text not null)";
 
     public static final String tablefotos = "create table fotos"
             + "(id_fotos integer primary key autoincrement,"

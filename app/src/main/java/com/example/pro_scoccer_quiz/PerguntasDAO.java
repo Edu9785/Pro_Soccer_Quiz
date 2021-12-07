@@ -11,7 +11,7 @@ public class PerguntasDAO {
     private SQLiteDatabase db;
     private DbHelper dbHelper; // instância da classe que criamos
 
-    private List<Jogadores> jogadores;
+    private List<perguntas> perguntas;
     private Jogadores jOgadores;
 
     public PerguntasDAO(Context context) {

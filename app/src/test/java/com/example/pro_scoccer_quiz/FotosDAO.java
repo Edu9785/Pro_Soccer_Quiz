@@ -2,11 +2,10 @@ package com.example.pro_scoccer_quiz;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.List;
 
-public class PerguntasDAO {
+public class FotosDAO {
 
     private SQLiteDatabase db;
     private DbHelper dbHelper; // instância da classe que criamos
@@ -14,7 +13,7 @@ public class PerguntasDAO {
     private List<Jogadores> jogadores;
     private Jogadores jOgadores;
 
-    public PerguntasDAO(Context context) {
+    public FotosDAO(Context context) {
         dbHelper = new DbHelper(context);
         db = dbHelper.getWritableDatabase();
     }

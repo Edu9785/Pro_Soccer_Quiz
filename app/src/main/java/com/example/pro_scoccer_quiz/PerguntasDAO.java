@@ -12,7 +12,7 @@ public class PerguntasDAO {
     private DbHelper dbHelper; // instância da classe que criamos
 
     private List<perguntas> perguntas;
-    private Jogadores jOgadores;
+    private Perguntas Perguntas;
 
     public PerguntasDAO(Context context) {
         dbHelper = new DbHelper(context);

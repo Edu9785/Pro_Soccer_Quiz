@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pro_scoccer_quiz">
         <activity
+            android:name=".CriarLogin"
+            android:exported="true" />
+        <activity
             android:name=".Vitoria"
             android:exported="true" />
         <activity

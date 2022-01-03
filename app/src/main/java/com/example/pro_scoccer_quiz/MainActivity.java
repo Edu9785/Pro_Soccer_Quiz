@@ -19,9 +19,6 @@ public class MainActivity extends AppCompatActivity {
         btnJogar = findViewById(R.id.btnjogar);
         btnSair = findViewById(R.id.btnSair);
 
-        JogadoresDAO jogadoresDAO = new JogadoresDAO(this);
-        PerguntasDAO perguntasDAO = new PerguntasDAO(this);
-
 
         btnJogar.setOnClickListener(new View.OnClickListener() {
             @Override

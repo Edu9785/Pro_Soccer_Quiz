@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="10dp"
+    tools:context=".CriarLogin">
+    
+    <EditText
+        android:id="@+id/txtUtilizador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Utilizador"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/txtPalavraPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PalavraPass"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/txtUtilizador"/>
+
+    <EditText
+        android:id="@+id/txtConfirmarPalavraPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirmar PalavraPasse"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/txtPalavraPass"/>
+
+    <Button
+        android:id="@+id/btnCriarConta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtConfirmarPalavraPass"
+        android:layout_marginTop="50dp"
+        android:text="Criar Conta" />
+
+
+
+</RelativeLayout>
+

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class login extends AppCompatActivity {
@@ -18,16 +19,23 @@ public class login extends AppCompatActivity {
 
         Button btnLogin, btnSa = null;
         EditText txtLogin, txtPass;
+        TextView textCriarLogin;
+
+        LoginDAO LoginDAO;
 
         btnLogin = findViewById(R.id.btnLogin);
         txtLogin = findViewById(R.id.txtLogin);
         txtPass = findViewById(R.id.txtPass);
         btnSa = findViewById(R.id.btnSa);
+        textCriarLogin = findViewById(R.id.textCriarLogin);
 
+        LoginDAO loginDAO = new LoginDAO(this);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 if (txtLogin.getText().toString().equals("admin") && txtPass.getText().toString().equals("123"))
                 {
                     Intent intent = new Intent(login.this, MainActivity.class);
@@ -44,6 +52,14 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finishAffinity();
+            }
+        });
+
+        textCriarLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(login.this, CriarLogin.class);
+                startActivity(intent);
             }
         });
 

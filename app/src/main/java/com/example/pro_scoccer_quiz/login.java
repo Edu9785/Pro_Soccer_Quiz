@@ -19,7 +19,7 @@ public class login extends AppCompatActivity {
 
         Button btnLogin, btnSa = null;
         EditText txtLogin, txtPass;
-        TextView textCriarLogin;
+        TextView textCriarLogin, textMudarPass;
 
         LoginDAO LoginDAO;
 
@@ -28,6 +28,7 @@ public class login extends AppCompatActivity {
         txtPass = findViewById(R.id.txtPass);
         btnSa = findViewById(R.id.btnSa);
         textCriarLogin = findViewById(R.id.textCriarLogin);
+        textMudarPass = findViewById(R.id.textMudarPass);
 
         LoginDAO loginDAO = new LoginDAO(this);
 
@@ -35,8 +36,19 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                String utilizador = txtLogin.getText().toString();
+                String pass = txtPass.getText().toString();
 
-                if (txtLogin.getText().toString().equals("admin") && txtPass.getText().toString().equals("123"))
+
+
+                Boolean ResultcheckUtilizador = loginDAO.checkUtilizadorpalavraPasse(utilizador, pass);
+
+                if(utilizador.equals("admin") && pass.equals("admin"))
+                {
+                    Intent intent = new Intent(login.this,AdminGestao.class);
+                    startActivity(intent);
+                }
+                else if (ResultcheckUtilizador == true)
                 {
                     Intent intent = new Intent(login.this, MainActivity.class);
                     startActivity(intent);
@@ -59,6 +71,14 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(login.this, CriarLogin.class);
+                startActivity(intent);
+            }
+        });
+
+        textMudarPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(login.this, MudarPass.class);
                 startActivity(intent);
             }
         });

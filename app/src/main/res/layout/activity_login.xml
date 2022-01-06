@@ -8,6 +8,18 @@
     tools:context=".login">
 
     <TextView
+        android:id="@+id/texteView"
+        android:layout_width="182dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="20dp"
+        android:text="Se não se lembra da pass clique"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass" />
+
+    <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,11 +86,11 @@
 
     <TextView
         android:id="@+id/texteView1"
-        android:layout_width="221dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="152dp"
-        android:text="Se esqueceu a sua palavrapasse clique"
+        android:layout_width="170dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="156dp"
+        android:text="Se ainda não têm conta clique"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,10 +98,22 @@
 
     <TextView
         android:id="@+id/textCriarLogin"
-        android:layout_width="37dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="296dp"
-        android:layout_marginTop="152dp"
+        android:layout_width="38dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="156dp"
+        android:text="aqui"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass" />
+
+    <TextView
+        android:id="@+id/textMudarPass"
+        android:layout_width="38dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="20dp"
         android:text="aqui"
         android:textColor="@android:color/holo_blue_light"
         android:textSize="12sp"

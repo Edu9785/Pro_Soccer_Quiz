@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/background"
+android:padding="10dp"
+tools:context=".MudarPass">
+
+    <EditText
+        android:id="@+id/txtUtilizador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Utilizador"
+        android:minHeight="48dp"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUtilizador"
+        android:layout_marginTop="50dp"
+        android:hint="Nova PalavraPass"
+        android:minHeight="48dp"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/txtConfirmarPalavraPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPass"
+        android:layout_marginTop="50dp"
+        android:hint="Confirmar nova PalavraPass"
+        android:minHeight="48dp"
+        android:textColorHint="@color/black" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/btnMudarPass"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/txtConfirmarPalavraPass"
+    android:layout_marginTop="50dp"
+    android:text="Mudar Pass"
+    android:background="@drawable/background"/>
+
+
+
+</RelativeLayout>

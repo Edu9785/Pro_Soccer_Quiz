@@ -24,4 +24,12 @@ public class LoginBD {
     public void setUtilizador(String utilizador) {
         Utilizador = utilizador;
     }
+
+    public LoginBD() {
+    }
+
+    public LoginBD(String utilizador) {
+        Utilizador = utilizador;
+    }
+
 }

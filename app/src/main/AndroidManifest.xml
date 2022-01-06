@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pro_scoccer_quiz">
         <activity
+            android:name=".AdminGestao"
+            android:exported="true" />
+        <activity
+            android:name=".MudarPass"
+            android:exported="true" />
+        <activity
             android:name=".CriarLogin"
             android:exported="true" />
         <activity

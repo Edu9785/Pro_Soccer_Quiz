@@ -22,7 +22,7 @@ public class CriarLogin extends AppCompatActivity {
         txtUtilizador = findViewById(R.id.txtUtilizador);
         txtpalavraPasse = findViewById(R.id.txtPalavraPass);
         txtConfirmarPalavraPass = findViewById(R.id.txtConfirmarPalavraPass);
-        btnCriarConta = findViewById(R.id.btnCriarConta);
+        btnCriarConta = findViewById(R.id.btnMudarPass);
         LoginDAO = new LoginDAO(this);
 
         LoginDAO loginDAO = new LoginDAO(this);
@@ -42,7 +42,7 @@ public class CriarLogin extends AppCompatActivity {
                 {
                     if(pass.equals(confPass))
                     {
-                        Boolean utilizadorcheckResult = loginDAO.checkUtilizadorpalavraPasse(utilizador, pass);
+                        Boolean utilizadorcheckResult = loginDAO.checkUtilizador(utilizador);
                         if(utilizadorcheckResult == false)
                         {
                             loginDAO.insertData(utilizador, pass);

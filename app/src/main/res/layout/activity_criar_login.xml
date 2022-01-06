@@ -32,7 +32,7 @@
         android:layout_below="@+id/txtPalavraPass"/>
 
     <Button
-        android:id="@+id/btnCriarConta"
+        android:id="@+id/btnMudarPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtConfirmarPalavraPass"

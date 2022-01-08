@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MudarPass extends AppCompatActivity {
+public class mudarPassActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,6 @@ public class MudarPass extends AppCompatActivity {
         txtPass = findViewById(R.id.txtPass);
         txtConfirmarPalavraPass = findViewById(R.id.txtConfirmarPalavraPass);
         txtUtilizador = findViewById(R.id.txtUtilizador);
-
         LoginDAO LoginDAO;
         LoginDAO = new LoginDAO(this);
 
@@ -43,7 +42,7 @@ public class MudarPass extends AppCompatActivity {
 
                         LoginBD loginBD = new LoginBD(utilizador);
                         loginBD.setUtilizador(utilizador);
-                        AlertDialog.Builder builder = new AlertDialog.Builder(MudarPass.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(mudarPassActivity.this);
 
                         builder.setTitle("Password");
                         builder.setMessage("Têm certeza que quer mudar a password?");

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Vitoria extends AppCompatActivity {
+public class vitoriaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class Vitoria extends AppCompatActivity {
         btnSair2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Vitoria.this, MainActivity.class);
+                Intent intent = new Intent(vitoriaActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

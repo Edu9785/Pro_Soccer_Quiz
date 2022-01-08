@@ -10,28 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pro_scoccer_quiz">
         <activity
-            android:name=".AdminGestao"
+            android:name=".adminGestaoActivity"
             android:exported="true" />
         <activity
-            android:name=".MudarPass"
+            android:name=".mudarPassActivity"
             android:exported="true" />
         <activity
             android:name=".CriarLogin"
             android:exported="true" />
         <activity
-            android:name=".Vitoria"
+            android:name=".vitoriaActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".Jogo"
+            android:name=".jogoActivity"
             android:exported="true" />
         <activity
-            android:name=".Derrota"
+            android:name=".derrotaActivity"
             android:exported="true" />
         <activity
-            android:name=".login"
+            android:name=".loginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

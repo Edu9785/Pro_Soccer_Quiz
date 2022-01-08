@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btnJogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Jogo.class);
+                Intent intent = new Intent(MainActivity.this, jogoActivity.class);
                 startActivity(intent);
             }
         });

@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class login extends AppCompatActivity {
+public class loginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,19 +38,16 @@ public class login extends AppCompatActivity {
 
                 String utilizador = txtLogin.getText().toString();
                 String pass = txtPass.getText().toString();
-
-
-
                 Boolean ResultcheckUtilizador = loginDAO.checkUtilizadorpalavraPasse(utilizador, pass);
 
-                if(utilizador.equals("admin") && pass.equals("admin"))
+                if(ResultcheckUtilizador == true)
                 {
-                    Intent intent = new Intent(login.this,AdminGestao.class);
+                    Intent intent = new Intent(loginActivity.this,MainActivity.class);
                     startActivity(intent);
                 }
-                else if (ResultcheckUtilizador == true)
+                else if (utilizador.equals("admin") && pass.equals("admin"))
                 {
-                    Intent intent = new Intent(login.this, MainActivity.class);
+                    Intent intent = new Intent(loginActivity.this, adminGestaoActivity.class);
                     startActivity(intent);
                 }
                 else
@@ -70,7 +67,7 @@ public class login extends AppCompatActivity {
         textCriarLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(login.this, CriarLogin.class);
+                Intent intent = new Intent(loginActivity.this, CriarLogin.class);
                 startActivity(intent);
             }
         });
@@ -78,7 +75,7 @@ public class login extends AppCompatActivity {
         textMudarPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(login.this, MudarPass.class);
+                Intent intent = new Intent(loginActivity.this, mudarPassActivity.class);
                 startActivity(intent);
             }
         });

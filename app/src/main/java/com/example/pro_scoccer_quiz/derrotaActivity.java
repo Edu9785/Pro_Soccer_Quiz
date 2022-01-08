@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Derrota extends AppCompatActivity {
+public class derrotaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class Derrota extends AppCompatActivity {
         btns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Derrota.this, MainActivity.class);
+                Intent intent = new Intent(derrotaActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

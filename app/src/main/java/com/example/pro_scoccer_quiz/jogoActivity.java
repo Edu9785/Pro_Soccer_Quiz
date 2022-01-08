@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Jogo extends AppCompatActivity {
+public class jogoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class Jogo extends AppCompatActivity {
         btnMessi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Jogo.this, Vitoria.class);
+                Intent intent = new Intent(jogoActivity.this, vitoriaActivity.class);
                 startActivity(intent);
             }
         });
@@ -35,7 +35,7 @@ public class Jogo extends AppCompatActivity {
         btnRonaldo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Jogo.this, Derrota.class);
+                Intent intent = new Intent(jogoActivity.this, derrotaActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +43,7 @@ public class Jogo extends AppCompatActivity {
         btnMbappe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Jogo.this, Derrota.class);
+                Intent intent = new Intent(jogoActivity.this, derrotaActivity.class);
                 startActivity(intent);
             }
         });
@@ -51,7 +51,7 @@ public class Jogo extends AppCompatActivity {
         btnBenzema.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Jogo.this, Derrota.class);
+                Intent intent = new Intent(jogoActivity.this, derrotaActivity.class);
                 startActivity(intent);
             }
         });

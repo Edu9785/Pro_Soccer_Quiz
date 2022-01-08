@@ -1,11 +1,13 @@
 package com.example.pro_scoccer_quiz;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LoginDAO {
@@ -13,8 +15,8 @@ public class LoginDAO {
     private SQLiteDatabase db;
     private DbHelper dbHelper; // instância da classe que criamos
 
-    private List<LoginBD> login;
-    private LoginBD Login = new LoginBD();
+    private List<LoginBD> login = new ArrayList<>();
+    private LoginBD Login;
 
     public LoginDAO(Context context) {
         dbHelper = new DbHelper(context);
@@ -42,7 +44,8 @@ public class LoginDAO {
     }
 
     public Boolean checkUtilizadorpalavraPasse(String Utilizador, String PalavraPass){
-        Cursor cursor = db.rawQuery("select * from login where Utilizador = ? and PalavraPass = ?", new String[] {Utilizador, PalavraPass});
+
+        Cursor cursor = db.rawQuery("select * from login where Utilizador = '" + Utilizador + "' and PalavraPass = '" + PalavraPass + "'",null);
         if(cursor.getCount() > 0)
         {
             return true;
@@ -61,26 +64,25 @@ public class LoginDAO {
         db.update("login", contentValues, "Utilizador = ?", new String[] {login.getUtilizador().toString()});
     }
 
-    public Boolean deleteData(String Utilizador, String PalavraPass){
-        Cursor cursor = db.rawQuery("select * from login where Utilizador = ? and PalavraPass = ?", new String[] {Utilizador, PalavraPass});
-        if(cursor.getCount() > 0)
-        {
-            long result = db.delete("login", "name = ? and PalavraPass = ?", new String[] {Utilizador, PalavraPass} );
-            if(result == -1)
-            {
-                return false;
+        @SuppressLint("Range")
+        public ArrayList<LoginBD> getinformacaoList() {
+            String strSql = "select * from login";
+            ArrayList<LoginBD> Login1 = new ArrayList<LoginBD>();
+            db = dbHelper.getReadableDatabase();
+            Cursor c = db.rawQuery(strSql, null);
+            if (c.moveToFirst()) {
+                do {
+                    Log.i("vv", "getinformacaoList:dd ");
+                    Login = new LoginBD();
+                    Login.setUtilizador(c.getString(c.getColumnIndex("Utilizador")));
+                    Login.setPalavraPass(c.getString(c.getColumnIndex("PalavraPass")));
+                    Log.i("vv", "getinformacaoList: xix");
+                    Login1.add(Login);
+                    Log.i("vv", "getinformacaoList: " + Login.getUtilizador() + ", " + Login.getPalavraPass());
+                } while (c.moveToNext());
+                Log.i("vv", "getinformacaoList: FFF");
             }
-            else
-            {
-                return true;
-            }
-
+            Log.i("vv", "getinformacaoList: NOP");
+            return Login1;
         }
-        else
-        {
-            return false;
-        }
-
-    }
-
 }
